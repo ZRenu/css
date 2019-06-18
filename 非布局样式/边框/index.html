@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>边框</title>
+    <style>
+        .c1 {
+            width: 400px;
+            height: 200px;
+            border: 1px solid red;
+            margin-bottom: 10px;
+        }
+
+        .c2 {
+            width: 400px;
+            height: 200px;
+            border: 30px solid transparent;
+            border-image: url('./border.png') 30 round;
+            margin-bottom: 10px;
+        }
+
+        .c3 {
+            width: 0;
+            border-bottom: 30px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            margin-bottom: 10px;
+
+        }
+
+        .c4 {
+            width: 0;
+            border-top: 30px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            margin-right: 10px;
+        }
+
+        .c5 {
+            width: 0;
+            border-left: 30px solid red;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            margin-right: 10px;
+        }
+
+        .c6 {
+            width: 0;
+            border-right: 30px solid red;
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div style="display: flex">
+        <div class="c3"></div>
+        <div class="c4"></div>
+        <div class="c5"></div>
+        <div class="c6"></div>
+    </div>
+</body>
+
+</html>
