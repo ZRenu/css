@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clip-path</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 300px;
+            border: 1px solid red;
+            background: url('../panda.jpg') no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 10px;
+            /* clip-path: inset(100px 50px); */
+            clip-path: circle(50px at 100px 100px);
+            /* transition: clip-path .4s; */
+            /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+            /* clip-path: url(#clipPath); */
+        }
+
+        .container:hover {
+            clip-path: circle(100px at 100px 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">你好，我是熊猫</div>
+    <svg>
+        <defs>
+            <clipPath id="clipPath">
+                <circle cx="60" cy="60" r="50" fill="#34538b"></circle>
+            </clipPath>
+        </defs>
+    </svg>
+</body>
+
+</html>
