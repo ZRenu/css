@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform demo</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        .container {
+            height: 500px;
+            width: 500px;
+            margin: 200px auto;
+            perspective: 1000px;
+        }
+
+        .cube {
+            height: 500px;
+            width: 500px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(0);
+            transition: transform 10s;
+        }
+
+        .cube:hover {
+            transform: rotateY(-360deg);
+        }
+
+
+        .cube div {
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            line-height: 500px;
+            color: aliceblue;
+            font-size: 16rem;
+            font-weight: bolder;
+            text-align: center;
+
+        }
+
+        .front {
+            background: rgba(255, 0, 0, .5);
+            transform: translateZ(250px);
+        }
+
+        .back {
+            background: rgba(255, 0, 0, .5);
+            transform: translateZ(-250px) rotateY(180deg);
+
+        }
+
+        .right {
+            background: rgba(255, 255, 0, .3);
+            transform: translateX(250px) rotateY(90deg);
+
+        }
+
+        .left {
+            background: rgba(0, 0, 255, .3);
+            transform: translateX(-250px) rotateY(-90deg);
+
+        }
+
+        .top {
+            background: rgba(255, 0, 255, .3);
+            transform: translateY(-250px) rotateX(90deg);
+
+        }
+
+        .bottom {
+            background: rgba(0, 255, 255, .3);
+            transform: translateY(250px) rotateX(90deg);
+
+        }
+
+        .center {
+            width: 250px !important;
+            height: 250px !important;
+            /* background: rgba(0, 255, 255, .3); */
+            border-radius: 50%;
+            transform: translate(125px, 125px);
+            border: 10px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: -webkit-radial-gradient(50% 0px, circle, #ffffff, rgba(255, 255, 255, 0) 58%); */
+            /* background: radial-gradient(circle at 100px 100px, #5cabff, #000); */
+            transition: transform 10s;
+        }
+
+        /* .center:hover {
+            transform: rotateX(-360deg);
+            transform: scale(1.5, 1.5);
+        } */
+
+        .center span {
+            vertical-align: middle;
+            font-size: 4rem !important;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cube">
+            <!-- <div class="front">Hell</div>
+            <div class="back">orld</div>
+            <div class="right">o,W</div>
+            <div class="left">!</div>
+            <div class="top"></div>
+            <div class="bottom"></div> -->
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center">
+                <span>Sunray</span>
+            </div>
+        </div>
+</body>
+
+</html>
